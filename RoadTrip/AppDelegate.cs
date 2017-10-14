@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using Facebook.CoreKit;
 using UIKit;
 
 namespace RoadTrip
@@ -9,6 +10,8 @@ namespace RoadTrip
     public class AppDelegate : UIApplicationDelegate
     {
         // class-level declarations
+        string appId = "1958389981115282";
+        string appName = "RoadTrip";
 
         public override UIWindow Window
         {
@@ -20,8 +23,11 @@ namespace RoadTrip
         {
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
+            Profile.EnableUpdatesOnAccessTokenChange(true);
+            Settings.AppID = appId;
+            Settings.DisplayName = appName;
 
-            return true;
+            return ApplicationDelegate.SharedInstance.FinishedLaunching(application, launchOptions);
         }
 
         public override void OnResignActivation(UIApplication application)
@@ -53,6 +59,12 @@ namespace RoadTrip
         public override void WillTerminate(UIApplication application)
         {
             // Called when the application is about to terminate. Save data, if needed. See also DidEnterBackground.
+        }
+
+        public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
+        {
+            // We need to handle URLs by passing them to their own OpenUrl in order to make the SSO authentication works.
+            return ApplicationDelegate.SharedInstance.OpenUrl(application, url, sourceApplication, annotation);
         }
     }
 }
