@@ -2,6 +2,7 @@
 using System.Drawing;
 using UIKit;
 using CoreLocation;
+//TODO: make serializable for storing in database!
 namespace RoadTrip.Model
 {
     public class Checkin
