@@ -1,18 +1,21 @@
 ﻿using System;
+using System.Drawing;
+using UIKit;
+using CoreLocation;
 namespace RoadTrip.Model
 {
     public class Checkin
     {
         public DateTime timeStamp { get; set; }
-        //public Image picture { get; set; }
+        public UIImage picture { get; set; }
         public string description { get; set; }
-        // public CLLocation location { get; set; }
-        public Checkin(DateTime _timeStamp, string _desc)
+        public CLLocation location { get; set; }
+        public Checkin(DateTime _timeStamp, UIImage _image, string _desc, CLLocation _loc)
         {
             timeStamp = _timeStamp;
-            //picture = _image;
+            picture = _image;
             description = _desc;
-            //location = _loc;
+            location = _loc;
         }
     }
 }
