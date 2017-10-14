@@ -1,4 +1,4 @@
-﻿// WARNING
+// WARNING
 //
 // This file has been generated automatically by Visual Studio from the outlets and
 // actions declared in your storyboard file.
@@ -15,44 +15,53 @@ namespace RoadTrip
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton startButton { get; set; }
+        UIKit.UIButton goButton { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIImageView startImage { get; set; }
+        UIKit.UITextView goText { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextView startLabel { get; set; }
+        UIKit.UIButton okayButton { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIView startView { get; set; }
+        UIKit.UILabel questionText { get; set; }
 
-        [Action ("StartButton_TouchUpInside:")]
+        [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void StartButton_TouchUpInside (UIKit.UIButton sender);
+        UIKit.UITableView tableLike2C { get; set; }
+
+        [Action ("GoButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void GoButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
-            if (startButton != null) {
-                startButton.Dispose ();
-                startButton = null;
+            if (goButton != null) {
+                goButton.Dispose ();
+                goButton = null;
             }
 
-            if (startImage != null) {
-                startImage.Dispose ();
-                startImage = null;
+            if (goText != null) {
+                goText.Dispose ();
+                goText = null;
             }
 
-            if (startLabel != null) {
-                startLabel.Dispose ();
-                startLabel = null;
+            if (okayButton != null) {
+                okayButton.Dispose ();
+                okayButton = null;
             }
 
-            if (startView != null) {
-                startView.Dispose ();
-                startView = null;
+            if (questionText != null) {
+                questionText.Dispose ();
+                questionText = null;
+            }
+
+            if (tableLike2C != null) {
+                tableLike2C.Dispose ();
+                tableLike2C = null;
             }
         }
     }
