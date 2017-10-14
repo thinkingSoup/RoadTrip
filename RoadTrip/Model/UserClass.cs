@@ -30,5 +30,10 @@ namespace RoadTrip.Model
             miles = miles + dist;
         }
 
+        public void addFriend(User person)
+        {
+            friends.Add(person);
+        }
+
     }
 }
