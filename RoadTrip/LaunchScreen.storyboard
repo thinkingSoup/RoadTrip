@@ -45,6 +45,8 @@
                     <connections>
                         <outlet property="startLabel" destination="199" id="name-outlet-199"/>
                         <outlet property="startImage" destination="203" id="name-outlet-203"/>
+                        <outlet property="startView" destination="Ze5-6b-2t3" id="name-outlet-Ze5-6b-2t3"/>
+                        <outlet property="startButton" destination="200" id="name-outlet-200"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
