@@ -24,12 +24,12 @@
                                 <color key="backgroundColor" customColorSpace="sRGB" colorSpace="calibratedRGB" red="0.32156862745098042" green="0.7686274509803922" blue="0.94901960784313721" alpha="1"/>
                                 <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="221" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="Ready to Go?">
-                                        <rect key="frame" x="2" y="107" width="372" height="128"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="221" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="Welcome to Your RoadTrip!">
+                                        <rect key="frame" x="2" y="52" width="372" height="177"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="56"/>
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="48"/>
                                         <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="222" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
@@ -109,6 +109,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
+                                <connections>
+                                    <segue id="1631" destination="1213" kind="push"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1219" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="306" y="176" width="42" height="21"/>
@@ -131,7 +134,7 @@
         </scene>
         <scene sceneID="1212">
             <objects>
-                <viewController id="1213" sceneMemberID="viewController">
+                <viewController id="1213" sceneMemberID="viewController" customClass="ViewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1210"/>
                         <viewControllerLayoutGuide type="bottom" id="1211"/>
@@ -139,8 +142,33 @@
                     <view key="view" contentMode="scaleToFill" id="1214">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32156862745098042" green="0.7686274509803922" blue="0.94901960784313721" alpha="1"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1433" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="usmap_pins.jpg">
+                                <rect key="frame" x="-310" y="108" width="709" height="549"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="1435" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="Where To?">
+                                <rect key="frame" x="2" y="14" width="372" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="56"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1436" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="Destination">
+                                <rect key="frame" x="55" y="400" width="265" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                            </textField>
+                        </subviews>
                     </view>
+                    <connections>
+                        <outlet property="mappinPic" destination="1433" id="name-outlet-1433"/>
+                        <outlet property="cityInput" destination="1436" id="name-outlet-1436"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1215" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,5 +180,8 @@
     </simulatedMetricsContainer>
     <resources>
         <image name="animated-car-image-0144.gif" width="153" height="111"/>
+        <image name="usamap.jpg" width="448" height="283"/>
+        <image name="RoadTrip.jpg" width="1024" height="1024"/>
+        <image name="usmap_pins.jpg" width="631" height="300"/>
     </resources>
 </document>

@@ -166,6 +166,9 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\animated-car-image-0144.gif" />
+    <BundleResource Include="Resources\usamap.jpg" />
+    <BundleResource Include="Resources\RoadTrip.jpg" />
+    <BundleResource Include="Resources\usmap_pins.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
