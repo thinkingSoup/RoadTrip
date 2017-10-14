@@ -25,7 +25,7 @@ namespace RoadTrip
             base.ViewDidLoad();
 
             // Set the Read and Publish permissions you want to get
-            loginView = new LoginButton(new CGRect(61, 288, 218, 46))
+            loginView = new LoginButton(new CGRect(77, 288, 218, 46))
             {
                 LoginBehavior = LoginBehavior.Native,
                 ReadPermissions = readPermissions.ToArray()
