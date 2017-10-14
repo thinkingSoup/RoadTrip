@@ -15,6 +15,10 @@ namespace RoadTrip
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton aboardButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField cityInput { get; set; }
 
         [Outlet]
@@ -41,12 +45,21 @@ namespace RoadTrip
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView tableLike2C { get; set; }
 
+        [Action ("AboardButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void AboardButton_TouchUpInside (UIKit.UIButton sender);
+
         [Action ("GoButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void GoButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
+            if (aboardButton != null) {
+                aboardButton.Dispose ();
+                aboardButton = null;
+            }
+
             if (cityInput != null) {
                 cityInput.Dispose ();
                 cityInput = null;
