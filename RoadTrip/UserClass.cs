@@ -11,6 +11,18 @@ public class User
     private Trip currentTrip { get; set; }
     private List<Trip> trips { get; set; }
 
+    public User(string _name, string _userName, string _password, double _miles, List<string> _sightsPrefs, List<User> _friends, Trip _currentTrip, List<Trip> _trips)
+    {
+        name = _name;
+        userName = _userName;
+        password = _password;
+        miles = _miles;
+        sightsPrefs = _sightsPrefs;
+        friends = _friends;
+        currentTrip = _currentTrip;
+        trips = _trips;
+    }
+
     public double incrementMiles(double dist)
     {
         miles = miles + dist;
