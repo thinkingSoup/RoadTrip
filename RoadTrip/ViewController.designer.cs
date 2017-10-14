@@ -19,19 +19,39 @@ namespace RoadTrip
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel bioText { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField cityInput { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton goButton { get; set; }
+        UIKit.UILabel currentTripLabel { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextView goText { get; set; }
+        UIKit.UILabel favrtNum { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel fbLink { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel hometownLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lastrtNum { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIImageView mappinPic { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextView nameText { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -45,13 +65,13 @@ namespace RoadTrip
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView tableLike2C { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel totaldistLabel { get; set; }
+
         [Action ("AboardButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void AboardButton_TouchUpInside (UIKit.UIButton sender);
-
-        [Action ("GoButton_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void GoButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
@@ -60,24 +80,49 @@ namespace RoadTrip
                 aboardButton = null;
             }
 
+            if (bioText != null) {
+                bioText.Dispose ();
+                bioText = null;
+            }
+
             if (cityInput != null) {
                 cityInput.Dispose ();
                 cityInput = null;
             }
 
-            if (goButton != null) {
-                goButton.Dispose ();
-                goButton = null;
+            if (currentTripLabel != null) {
+                currentTripLabel.Dispose ();
+                currentTripLabel = null;
             }
 
-            if (goText != null) {
-                goText.Dispose ();
-                goText = null;
+            if (favrtNum != null) {
+                favrtNum.Dispose ();
+                favrtNum = null;
+            }
+
+            if (fbLink != null) {
+                fbLink.Dispose ();
+                fbLink = null;
+            }
+
+            if (hometownLabel != null) {
+                hometownLabel.Dispose ();
+                hometownLabel = null;
+            }
+
+            if (lastrtNum != null) {
+                lastrtNum.Dispose ();
+                lastrtNum = null;
             }
 
             if (mappinPic != null) {
                 mappinPic.Dispose ();
                 mappinPic = null;
+            }
+
+            if (nameText != null) {
+                nameText.Dispose ();
+                nameText = null;
             }
 
             if (okayButton != null) {
@@ -93,6 +138,11 @@ namespace RoadTrip
             if (tableLike2C != null) {
                 tableLike2C.Dispose ();
                 tableLike2C = null;
+            }
+
+            if (totaldistLabel != null) {
+                totaldistLabel.Dispose ();
+                totaldistLabel = null;
             }
         }
     }
