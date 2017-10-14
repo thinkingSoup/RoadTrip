@@ -1,68 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r" launchScreen="NO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2319" launchScreen="NO">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="LaunchScreen" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <subviews>
-                            <view key="view" contentMode="scaleToFill" id="220" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" customColorSpace="sRGB" colorSpace="calibratedRGB" red="0.32156862745098042" green="0.7686274509803922" blue="0.94901960784313721" alpha="1"/>
-                                <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="221" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="Welcome to Your RoadTrip!">
-                                        <rect key="frame" x="2" y="119" width="372" height="177"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="48"/>
-                                        <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="222" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                        <rect key="frame" x="62" y="316" width="251" height="82"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="37"/>
-                                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.9882352941176471" green="0.55294117647058827" blue="0.47058823529411764" alpha="1"/>
-                                        <state key="normal" title="Let's Go!">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="StartButton_TouchUpInside:" destination="224" id="223" eventType="touchUpInside"/>
-                                            <action selector="GoButton_TouchUpInside:" destination="BYZ-38-t0r" id="470" eventType="touchUpInside"/>
-                                            <segue id="1203" destination="261" kind="push"/>
-                                        </connections>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="227" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="animated-car-image-0144.gif">
-                                        <rect key="frame" x="68" y="440" width="253" height="157"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                            </view>
-                        </subviews>
-                    </view>
-                    <connections>
-                        <outlet property="goText" destination="221" id="name-outlet-221"/>
-                        <outlet property="goButton" destination="222" id="name-outlet-222"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
-        </scene>
         <scene sceneID="260">
             <objects>
                 <viewController id="261" sceneMemberID="viewController" customClass="ViewController">
@@ -144,10 +87,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32156862745098042" green="0.7686274509803922" blue="0.94901960784313721" alpha="1"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1433" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="usmap_pins.jpg">
-                                <rect key="frame" x="-310" y="108" width="709" height="549"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="1435" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="Where To?">
                                 <rect key="frame" x="2" y="33" width="372" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -180,7 +119,6 @@
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="mappinPic" destination="1433" id="name-outlet-1433"/>
                         <outlet property="cityInput" destination="1436" id="name-outlet-1436"/>
                         <outlet property="aboardButton" destination="2323" id="name-outlet-2323"/>
                     </connections>
@@ -209,10 +147,6 @@
                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="56"/>
                                 <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2538" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="64" y="134" width="246" height="173"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2540" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" numberOfLines="3" text="Total Miles:">
                                 <rect key="frame" x="115" y="337" width="100" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -415,9 +349,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
-                                <connections>
-                                    <segue id="2821" destination="2822" kind="push"/>
-                                </connections>
+                                <connections/>
                             </button>
                         </subviews>
                     </view>
@@ -434,7 +366,7 @@
         </scene>
         <scene sceneID="2318">
             <objects>
-                <viewController id="2319" sceneMemberID="viewController">
+                <viewController id="2319" sceneMemberID="viewController" customClass="LoginScreen">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2316"/>
                         <viewControllerLayoutGuide type="bottom" id="2317"/>
@@ -447,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2321" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1880" y="819"/>
+            <point key="canvasLocation" x="442" y="772"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -455,7 +387,6 @@
     </simulatedMetricsContainer>
     <resources>
         <image name="animated-car-image-0144.gif" width="153" height="111"/>
-        <image name="RoadTrip.jpg" width="1024" height="1024"/>
         <image name="usmap_pins.jpg" width="631" height="300"/>
         <image name="usamap.jpg" width="448" height="283"/>
     </resources>

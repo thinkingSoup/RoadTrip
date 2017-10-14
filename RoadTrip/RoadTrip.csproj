@@ -163,6 +163,10 @@
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="DataStorage.cs" />
+    <Compile Include="LoginScreen.cs" />
+    <Compile Include="LoginScreen.designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\animated-car-image-0144.gif" />

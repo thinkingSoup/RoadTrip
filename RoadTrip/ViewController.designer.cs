@@ -47,10 +47,6 @@ namespace RoadTrip
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIImageView mappinPic { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextView nameText { get; set; }
 
         [Outlet]
@@ -113,11 +109,6 @@ namespace RoadTrip
             if (lastrtNum != null) {
                 lastrtNum.Dispose ();
                 lastrtNum = null;
-            }
-
-            if (mappinPic != null) {
-                mappinPic.Dispose ();
-                mappinPic = null;
             }
 
             if (nameText != null) {
