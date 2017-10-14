@@ -158,6 +158,22 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Model\TripClass.cs" />
     <Compile Include="Model\UserClass.cs" />
+    <Compile Include="NewTripController.cs" />
+    <Compile Include="NewTripController.designer.cs">
+      <DependentUpon>NewTripController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrefsController.cs" />
+    <Compile Include="PrefsController.designer.cs">
+      <DependentUpon>PrefsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileController.cs" />
+    <Compile Include="ProfileController.designer.cs">
+      <DependentUpon>ProfileController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TravelHubController.cs" />
+    <Compile Include="TravelHubController.designer.cs">
+      <DependentUpon>TravelHubController.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewController.cs" />
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>

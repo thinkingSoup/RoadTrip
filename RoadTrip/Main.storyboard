@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2319" launchScreen="NO">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="260">
             <objects>
-                <viewController id="261" sceneMemberID="viewController" customClass="ViewController">
+                <viewController id="261" sceneMemberID="viewController" customClass="PrefsController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="258"/>
                         <viewControllerLayoutGuide type="bottom" id="259"/>
@@ -77,7 +77,7 @@
         </scene>
         <scene sceneID="1212">
             <objects>
-                <viewController id="1213" sceneMemberID="viewController" customClass="ViewController">
+                <viewController id="1213" sceneMemberID="viewController" customClass="NewTripController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1210"/>
                         <viewControllerLayoutGuide type="bottom" id="1211"/>
@@ -129,7 +129,7 @@
         </scene>
         <scene sceneID="1851">
             <objects>
-                <viewController id="1852" sceneMemberID="viewController" customClass="ViewController">
+                <viewController id="1852" sceneMemberID="viewController" customClass="ProfileController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1849"/>
                         <viewControllerLayoutGuide type="bottom" id="1850"/>
@@ -276,7 +276,7 @@
         </scene>
         <scene sceneID="1858">
             <objects>
-                <viewController id="1859" sceneMemberID="viewController">
+                <viewController id="1859" sceneMemberID="viewController" customClass="TravelHubController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1856"/>
                         <viewControllerLayoutGuide type="bottom" id="1857"/>
@@ -387,7 +387,5 @@
     </simulatedMetricsContainer>
     <resources>
         <image name="animated-car-image-0144.gif" width="153" height="111"/>
-        <image name="usmap_pins.jpg" width="631" height="300"/>
-        <image name="usamap.jpg" width="448" height="283"/>
     </resources>
 </document>
