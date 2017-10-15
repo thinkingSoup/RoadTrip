@@ -60,7 +60,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1215" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879" y="-19"/>
+            <point key="canvasLocation" x="-80" y="701"/>
         </scene>
         <scene sceneID="1851">
             <objects>
@@ -212,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1854" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1699" y="-9"/>
+            <point key="canvasLocation" x="630" y="-207"/>
         </scene>
         <scene sceneID="1858">
             <objects>
@@ -322,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1861" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1243" y="813"/>
+            <point key="canvasLocation" x="637" y="671"/>
         </scene>
         <scene sceneID="2318">
             <objects>
@@ -353,6 +353,9 @@
                                 <state key="normal" title="Continue to Service">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue id="12221" destination="1213" kind="push"/>
+                                </connections>
                             </button>
                         </subviews>
                     </view>
@@ -363,7 +366,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2321" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< Updated upstream
             <point key="canvasLocation" x="384" y="-22"/>
+=======
+            <point key="canvasLocation" x="-963" y="706"/>
+>>>>>>> Stashed changes
         </scene>
         <scene sceneID="9534">
             <objects>
@@ -429,7 +436,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9537" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2154" y="-3"/>
+            <point key="canvasLocation" x="1272" y="-216"/>
         </scene>
         <scene sceneID="10948">
             <objects>
@@ -514,7 +521,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10951" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1869" y="811"/>
+            <point key="canvasLocation" x="1313" y="698"/>
         </scene>
         <scene sceneID="11150">
             <objects>
@@ -529,7 +536,7 @@
                         <color key="backgroundColor" colorSpace="calibratedRGB" red="0.46666666666666667" green="0.83921568627450982" blue="0.43529411764705883" alpha="1"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="11375" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="RoadTrip Complete!">
-                                <rect key="frame" x="2" y="74" width="372" height="90"/>
+                                <rect key="frame" x="2" y="77" width="372" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -537,19 +544,57 @@
                                 <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="11376" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="home sweet home">
-                                <rect key="frame" x="2" y="125" width="372" height="59"/>
+                                <rect key="frame" x="2" y="310" width="372" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="23"/>
                                 <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="11646" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="home.jpeg">
+                                <rect key="frame" x="71" y="153" width="233" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="11647" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="Check out your RoadTrip's details in">
+                                <rect key="frame" x="2" y="385" width="372" height="275"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="36"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="11650" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="114" y="566" width="130" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.9882352941176471" green="0.55294117647058827" blue="0.47058823529411764" alpha="1"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="25"/>
+                                <state key="normal" title="Okay">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <connections>
+                                    <segue id="11816" destination="1213" kind="push"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="11820" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="28" y="490" width="319" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.46666666666666667" green="0.83921568627450982" blue="0.43529411764705883" alpha="1"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="36"/>
+                                <state key="normal" title="Past RoadTrips">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0.27058823529411763" green="0.71764705882352942" blue="0.93333333333333335" alpha="1"/>
+                                </state>
+                                <connections>
+                                    <segue id="12147" destination="9535" kind="push"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11153" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1243" y="1565"/>
+            <point key="canvasLocation" x="638" y="1601"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -560,5 +605,6 @@
         <image name="boto.png" width="1600" height="1200"/>
         <image name="map-pin.png" width="2400" height="2400"/>
         <image name="map-pin-pic.jpg" width="1067" height="800"/>
+        <image name="home.jpeg" width="1280" height="1030"/>
     </resources>
 </document>
