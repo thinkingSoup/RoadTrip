@@ -24,6 +24,10 @@ namespace RoadTrip
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton endTripButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         MapKit.MKMapView map { get; set; }
 
         [Outlet]
@@ -33,6 +37,14 @@ namespace RoadTrip
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel time { get; set; }
+
+        [Action ("CheckInButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void CheckInButton_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("UIButton11126_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void UIButton11126_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
@@ -44,6 +56,11 @@ namespace RoadTrip
             if (distanceLabel != null) {
                 distanceLabel.Dispose ();
                 distanceLabel = null;
+            }
+
+            if (endTripButton != null) {
+                endTripButton.Dispose ();
+                endTripButton = null;
             }
 
             if (map != null) {

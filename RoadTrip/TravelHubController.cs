@@ -14,6 +14,7 @@ namespace RoadTrip
 
         public override void ViewDidLoad() {
             base.ViewDidLoad();
+            map.ShowsUserLocation = true;
             CLLocationManager locationManager = new CLLocationManager();
             locationManager.RequestWhenInUseAuthorization();
         }
