@@ -1,19 +1,33 @@
 using System;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using MapKit;
 namespace RoadTrip.Model
 {
     public class Trip
     {
-        private string tripName { get; set; }
-        private double distance { get; set; }
-        private double days { get; set; }
-        private float price { get; set; }
-
-        public Trip(string _tripName, double _distance, double _days, float _price)
+        public Trip()
         {
-            tripName = _tripName;
-            distance = _distance;
-            days = _days;
-            price = _price;
+            stops = new List<MKMapPoint>();
+            checkIns = new List<Checkin>();
         }
+        public int id
+        {
+            get
+            {
+                return tripName.GetHashCode();
+            }
+        }
+        public string tripName { get; set; }
+        public double distance { get; set; }
+        public double days { get; set; }
+        public List<MKMapPoint> stops { get; set; }
+        public MKRoute route { get; set; }
+        public List<Checkin> checkIns { get; set; }
+        public override string ToString()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
+
     }
 }

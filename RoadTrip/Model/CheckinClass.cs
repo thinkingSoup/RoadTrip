@@ -1,23 +1,19 @@
 ﻿using System;
-using System.Drawing;
 using UIKit;
 using CoreLocation;
 using MapKit;
-//TODO: make serializable for storing in database!
+using Newtonsoft.Json;
 namespace RoadTrip.Model
 {
     public class Checkin
     {
         public DateTime timeStamp { get; set; }
-        public UIImage picture { get; set; }
+        public string pictureUrl { get; set; }
         public string description { get; set; }
-        public CLLocation location { get; set; }
-        public Checkin(DateTime _timeStamp, UIImage _image, string _desc, CLLocation _loc)
+        public MKMapPoint location { get; set; }
+        public override string ToString()
         {
-            timeStamp = _timeStamp;
-            picture = _image;
-            description = _desc;
-            location = _loc;
+            return JsonConvert.SerializeObject(this);
         }
     }
 }
