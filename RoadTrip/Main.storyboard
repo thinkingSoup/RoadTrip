@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2319" launchScreen="NO">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
@@ -389,6 +389,10 @@
                             </imageView>
                         </subviews>
                     </view>
+                    <connections>
+                        <segue id="7076" destination="261" kind="show" identifier="newUserSegue"/>
+                        <segue id="7150" destination="1213" kind="show" identifier="returningUserSegue"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2321" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

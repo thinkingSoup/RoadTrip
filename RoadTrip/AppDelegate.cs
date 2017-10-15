@@ -13,6 +13,7 @@ namespace RoadTrip
         string appId = "1958389981115282";
         string appName = "RoadTrip";
 
+
         public override UIWindow Window
         {
             get;
@@ -26,6 +27,7 @@ namespace RoadTrip
             Profile.EnableUpdatesOnAccessTokenChange(true);
             Settings.AppID = appId;
             Settings.DisplayName = appName;
+
 
             return ApplicationDelegate.SharedInstance.FinishedLaunching(application, launchOptions);
         }

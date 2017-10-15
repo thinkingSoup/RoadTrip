@@ -9,5 +9,6 @@ namespace RoadTrip
         public PrefsController (IntPtr handle) : base (handle)
         {
         }
+        public Model.User user { get; set; }
     }
 }
