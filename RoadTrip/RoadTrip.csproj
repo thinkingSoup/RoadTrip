@@ -138,9 +138,6 @@
     <Reference Include="Microsoft.Azure.DocumentDB.Core">
       <HintPath>..\packages\Microsoft.Azure.DocumentDB.Core.1.5.1\lib\netstandard1.6\Microsoft.Azure.DocumentDB.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin-Sidebar-Unified">
-      <HintPath>..\packages\SidebarNavigation.1.9.4\lib\Xamarin.iOS10\Xamarin-Sidebar-Unified.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -170,6 +167,10 @@
     <Compile Include="NewTripController.designer.cs">
       <DependentUpon>NewTripController.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrefsController.cs" />
+    <Compile Include="PrefsController.designer.cs">
+      <DependentUpon>PrefsController.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProfileController.cs" />
     <Compile Include="ProfileController.designer.cs">
       <DependentUpon>ProfileController.cs</DependentUpon>
@@ -186,6 +187,10 @@
     <Compile Include="LoginScreen.cs" />
     <Compile Include="LoginScreen.designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PastRoadTrips.cs" />
+    <Compile Include="PastRoadTrips.designer.cs">
+      <DependentUpon>PastRoadTrips.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
