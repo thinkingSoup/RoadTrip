@@ -1,4 +1,4 @@
-﻿// WARNING
+// WARNING
 //
 // This file has been generated automatically by Visual Studio from the outlets and
 // actions declared in your storyboard file.
@@ -21,10 +21,6 @@ namespace RoadTrip
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField cityInput { get; set; }
-
-        [Action ("AboardButton_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void AboardButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {

@@ -24,6 +24,21 @@ namespace RoadTrip
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+            if (AccessToken.CurrentAccessToken != null)
+            {
+                user = DataStorage.Instance.GetUser(AccessToken.CurrentAccessToken.UserID);
+                continueButton.Hidden = false;
+                continueButton.UserInteractionEnabled = true;
+            }
+            else
+            {
+                continueButton.Hidden = true;
+                continueButton.UserInteractionEnabled = false;
+            }
+
+            continueButton.TouchUpInside += (sender, e) => {
+                goToNext();
+            };
             // Set the Read and Publish permissions you want to get
             loginView = new LoginButton(new CGRect(77, 288, 218, 46))
             {
@@ -45,7 +60,7 @@ namespace RoadTrip
                 }
                 if (DataStorage.Instance.GetUser(AccessToken.CurrentAccessToken.UserID) != null) {
                     user = DataStorage.Instance.GetUser(AccessToken.CurrentAccessToken.UserID);
-                    //TODO: add code to segue into next screen
+                    goToNext();
                 } else {
                     showLoginError();
                 }
@@ -54,7 +69,9 @@ namespace RoadTrip
             // Handle actions once the user is logged out
             loginView.LoggedOut += (sender, e) =>
             {
-                // Handle your logout
+                continueButton.Hidden = true;
+                continueButton.UserInteractionEnabled = false;
+                user = null;
             };
 
             // Add views to main view

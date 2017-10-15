@@ -1,4 +1,4 @@
-﻿// WARNING
+// WARNING
 //
 // This file has been generated automatically by Visual Studio from the outlets and
 // actions declared in your storyboard file.
@@ -24,11 +24,15 @@ namespace RoadTrip
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        MapKit.MKMapView map { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel priceLabel { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel timelabel { get; set; }
+        UIKit.UILabel time { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
@@ -42,14 +46,19 @@ namespace RoadTrip
                 distanceLabel = null;
             }
 
+            if (map != null) {
+                map.Dispose ();
+                map = null;
+            }
+
             if (priceLabel != null) {
                 priceLabel.Dispose ();
                 priceLabel = null;
             }
 
-            if (timelabel != null) {
-                timelabel.Dispose ();
-                timelabel = null;
+            if (time != null) {
+                time.Dispose ();
+                time = null;
             }
         }
     }

@@ -14,5 +14,16 @@ namespace RoadTrip
     [Register ("LoginScreen")]
     partial class LoginScreen
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton continueButton { get; set; }
+
+        void ReleaseDesignerOutlets ()
+        {
+            if (continueButton != null) {
+                continueButton.Dispose ();
+                continueButton = null;
+            }
+        }
     }
 }

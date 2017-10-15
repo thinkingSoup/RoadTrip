@@ -53,7 +53,7 @@
                                     <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
                                 <connections>
-                                    <segue id="1631" destination="1213" kind="push"/>
+                                    <segue id="1631" destination="1213" kind="show"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1219" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="263" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="443" y="-19"/>
+            <point key="canvasLocation" x="347" y="-25"/>
         </scene>
         <scene sceneID="1212">
             <objects>
@@ -112,8 +112,7 @@
                                     <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
                                 <connections>
-                                    <action selector="AboardButton_TouchUpInside:" destination="1213" id="2326" eventType="touchUpInside"/>
-                                    <segue id="2571" destination="1859" kind="push"/>
+                                    <segue id="9280" destination="1859" kind="show"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -286,7 +285,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32156862745098042" green="0.7686274509803922" blue="0.94901960784313721" alpha="1"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="1863" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="1863" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" showsUserLocation="YES">
                                 <rect key="frame" x="40" y="348" width="296" height="272"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
@@ -312,7 +311,7 @@
                                 <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2087" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" numberOfLines="3" text="Ellapsed Time:">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2087" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" numberOfLines="3" text="Elapsed Time:">
                                 <rect key="frame" x="16" y="134" width="143" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="15"/>
@@ -356,8 +355,9 @@
                     <connections>
                         <outlet property="distanceLabel" destination="2088" id="name-outlet-2088"/>
                         <outlet property="priceLabel" destination="2089" id="name-outlet-2089"/>
-                        <outlet property="time label" destination="2090" id="name-outlet-2090"/>
+                        <outlet property="time" destination="2090" id="name-outlet-2090"/>
                         <outlet property="checkInButton" destination="2820" id="name-outlet-2820"/>
+                        <outlet property="map" destination="1863" id="name-outlet-1863"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1861" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -387,11 +387,19 @@
                                 <rect key="frame" x="60" y="401" width="240" height="149"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8911" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="40" y="230" width="293" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Continue to Service">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <segue id="7076" destination="261" kind="show" identifier="newUserSegue"/>
                         <segue id="7150" destination="1213" kind="show" identifier="returningUserSegue"/>
+                        <outlet property="continueButton" destination="8911" id="name-outlet-8911"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2321" userLabel="First Responder" sceneMemberID="firstResponder"/>

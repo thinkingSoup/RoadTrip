@@ -10,13 +10,12 @@ namespace RoadTrip
     {
         public TravelHubController (IntPtr handle) : base (handle)
         {
-            map = new MKMapView(UIScreen.MainScreen.Bounds);
-            View = map;
-            map.ZoomEnabled = true;
-            map.ScrollEnabled = true;
+        }
+
+        public override void ViewDidLoad() {
+            base.ViewDidLoad();
             CLLocationManager locationManager = new CLLocationManager();
             locationManager.RequestWhenInUseAuthorization();
-            map.ShowsUserLocation = true;
         }
     }
 }
