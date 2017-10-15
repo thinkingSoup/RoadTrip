@@ -20,11 +20,11 @@ namespace RoadTrip
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel questionText { get; set; }
+        UIKit.UITableView prefChoices { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITableView tableLike2C { get; set; }
+        UIKit.UILabel questionText { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
@@ -33,14 +33,14 @@ namespace RoadTrip
                 okayButton = null;
             }
 
+            if (prefChoices != null) {
+                prefChoices.Dispose ();
+                prefChoices = null;
+            }
+
             if (questionText != null) {
                 questionText.Dispose ();
                 questionText = null;
-            }
-
-            if (tableLike2C != null) {
-                tableLike2C.Dispose ();
-                tableLike2C = null;
             }
         }
     }
