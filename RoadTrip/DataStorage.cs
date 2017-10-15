@@ -51,8 +51,7 @@ namespace RoadTrip
                 id = AccessToken.CurrentAccessToken.UserID,
                 name = "",
                 miles = 0,
-                currentTrip = -1,
-                sightsPrefs = new List<string>()
+                currentTrip = -1
             };
             client.CreateDocumentAsync(UriFactory.CreateDocumentCollectionUri(database,
                                                                               userTable),

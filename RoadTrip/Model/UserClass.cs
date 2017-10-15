@@ -8,7 +8,6 @@ namespace RoadTrip.Model
         public string id { get; set; }
         public string name { get; set; }
         public double miles { get; set; }
-        public List<string> sightsPrefs { get; set; }
         //private List<User> friends { get; set; }
         public int currentTrip { get; set; }
         //private List<Trip> trips { get; set; }

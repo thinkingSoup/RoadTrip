@@ -26,8 +26,6 @@ namespace RoadTrip.Model
         public MKRoute route { get; set; }
         public List<Checkin> checkIns { get; set; }
 
-        
-
         public override string ToString()
         {
             return JsonConvert.SerializeObject(this);
