@@ -2,23 +2,22 @@ using System;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using MapKit;
-using MKDirections;
 namespace RoadTrip.Model
 {
     public class Trip
     {
-        public Trip()
+        public Trip(Model.User user)
         {
             stops = new List<MKMapPoint>();
             checkIns = new List<Checkin>();
+            userID = user.id;
         }
-        public int id
-        {
-            get
-            {
-                return tripName.GetHashCode();
+        public string id {
+            get {
+                return tripName;
             }
         }
+        public string userID { get; set; }
         public string tripName { get; set; }
         public double distance { get; set; }
         public double days { get; set; }

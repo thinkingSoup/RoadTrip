@@ -29,6 +29,7 @@ namespace RoadTrip
             client = new DocumentClient(new Uri(EndpointUrl), PrimaryKey);
             return;
         }
+
         public RoadTrip.Model.User GetUser(string userId)
         {
             FeedOptions queryOptions = new FeedOptions { MaxItemCount = 1 };
@@ -72,6 +73,32 @@ namespace RoadTrip
             get {
                 return instance;
             }
+        }
+
+        public void AddNewTrip(Model.User user, Model.Trip trip) {
+            RequestOptions queryOptions = new RequestOptions { PartitionKey = new PartitionKey(user.id) };
+            client.CreateDocumentAsync(UriFactory.CreateDocumentCollectionUri(database, tripTable),
+                                      trip, queryOptions).Wait();
+        }
+
+        public List<Model.Trip> GetTrips(Model.User user) {
+            FeedOptions queryOptions = new FeedOptions { MaxItemCount = 1,
+                PartitionKey = new PartitionKey(user.id)};
+            IQueryable<Model.Trip> tripQuery = client.CreateDocumentQuery<Model.Trip>(
+                UriFactory.CreateDocumentCollectionUri(database, tripTable), queryOptions);
+            return tripQuery.ToList();
+        }
+
+        public void UpdateTrip(Model.User user, Model.Trip trip)
+        {
+            UpdateUserAsync(user, trip);
+        }
+
+        private async System.Threading.Tasks.Task UpdateUserAsync(Model.User user, Model.Trip trip)
+        {
+            RequestOptions queryOptions = new RequestOptions { PartitionKey = new PartitionKey(user.id) };
+            await client.ReplaceDocumentAsync(UriFactory.CreateDocumentUri(database, tripTable, trip.id),
+                                              trip, queryOptions);
         }
     }
 }
