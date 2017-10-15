@@ -60,6 +60,15 @@ namespace RoadTrip
             return;
         }
 
+        public void UpdateUser(Model.User user) {
+            UpdateUserAsync(user);
+        }
+
+        private async System.Threading.Tasks.Task UpdateUserAsync(Model.User user)
+        {
+            await client.ReplaceDocumentAsync(UriFactory.CreateDocumentUri(database, userTable, user.id), user);
+        }
+
         public static DataStorage Instance {
             get {
                 return instance;

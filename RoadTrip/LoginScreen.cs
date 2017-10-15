@@ -91,15 +91,13 @@ namespace RoadTrip
             base.PrepareForSegue(segue, sender);
             if (segue.Identifier == "newUserSegue")
             {
-                string username = "";
                 var request = new GraphRequest("me", null);
                 request.Start((connection, result, error) =>
                 {
                     var userInfo = result as Foundation.NSDictionary;
-                    username = userInfo["name"].ToString();
-                    Console.WriteLine(username);
+                    user.name = userInfo["name"].ToString();
+                    DataStorage.Instance.UpdateUser(user);
                 });
-                user.name = username;
                 var newUser = segue.DestinationViewController as PrefsController;
                 newUser.user = user;
             }

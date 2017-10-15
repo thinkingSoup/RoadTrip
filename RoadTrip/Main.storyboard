@@ -412,5 +412,6 @@
     </simulatedMetricsContainer>
     <resources>
         <image name="animated-car-image-0144.gif" width="153" height="111"/>
+        <image name="boto.png" width="1600" height="1200"/>
     </resources>
 </document>
