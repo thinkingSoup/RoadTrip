@@ -44,6 +44,10 @@ namespace RoadTrip
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView profilePic { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel totaldistLabel { get; set; }
 
         void ReleaseDesignerOutlets ()
@@ -81,6 +85,11 @@ namespace RoadTrip
             if (nameText != null) {
                 nameText.Dispose ();
                 nameText = null;
+            }
+
+            if (profilePic != null) {
+                profilePic.Dispose ();
+                profilePic = null;
             }
 
             if (totaldistLabel != null) {
