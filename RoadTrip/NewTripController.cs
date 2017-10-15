@@ -36,6 +36,14 @@ namespace RoadTrip
                 }
             });
             return drivingRoute;
+            var rteLine = new MKPolylineRenderer(drivingRoute.Polyline)
+            {
+                LineWidth = 5.0f,
+                StrokeColor = UIColor.Purple
+            };
+
+            mapView.GetRendererForOverlay = (mv, ol) => rteLine;
+            mapView.AddOverlay(route.Polyline, MKOverlayLevel.AboveRoads);
         }
-    }
 }
+    }
