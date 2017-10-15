@@ -10,5 +10,14 @@ namespace RoadTrip
         {
         }
         public Model.User user { get; set; }
+
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
+            table = new UITableView(View.Bounds); // defaults to Plain style
+            string[] tableItems = new string[] { "Monuments", "Parks", "Museums", "Architecture", "Sports", "Beaches" };
+            table.Source = new TableSource(tableItems);
+            Add(table);
+        }
     }
 }
