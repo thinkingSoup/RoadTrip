@@ -290,7 +290,7 @@
                                     <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
                                 <connections>
-                                    <segue id="11119" destination="10949" kind="push"/>
+                                    <segue id="11119" destination="10949" kind="show"/>
                                     <action selector="CheckInButton_TouchUpInside:" destination="1859" id="11122" eventType="touchUpInside"/>
                                 </connections>
                             </button>
@@ -306,7 +306,7 @@
                                 <connections>
                                     <action selector="CheckInButton_TouchUpInside:" destination="11130" id="11129" eventType="touchUpInside"/>
                                     <action selector="UIButton11126_TouchUpInside:" destination="1859" id="11132" eventType="touchUpInside"/>
-                                    <segue id="11373" destination="11151" kind="push"/>
+                                    <segue id="11373" destination="11151" kind="show"/>
                                 </connections>
                             </button>
                         </subviews>
