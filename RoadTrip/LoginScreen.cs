@@ -37,7 +37,7 @@ namespace RoadTrip
             }
 
             continueButton.TouchUpInside += (sender, e) => {
-                goToNext();
+                PerformSegue("returningUserSegue", this);
             };
             // Set the Read and Publish permissions you want to get
             loginView = new LoginButton(new CGRect(77, 288, 218, 46))
@@ -60,7 +60,7 @@ namespace RoadTrip
                 }
                 if (DataStorage.Instance.GetUser(AccessToken.CurrentAccessToken.UserID) != null) {
                     user = DataStorage.Instance.GetUser(AccessToken.CurrentAccessToken.UserID);
-                    goToNext();
+                    PerformSegue("returningUserSegue", this);
                 } else {
                     showLoginError();
                 }
@@ -78,18 +78,10 @@ namespace RoadTrip
             View.AddSubview(loginView);
         }
 
-        private void goToNext() {
-            if (user.name == "") {
-                PerformSegue("newUserSegue", this);
-            } else {
-                PerformSegue("returningUserSegue", this);
-            }
-        }
-
         public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
         {
             base.PrepareForSegue(segue, sender);
-            if (segue.Identifier == "newUserSegue")
+            if (user.name == "")
             {
                 var request = new GraphRequest("me", null);
                 request.Start((connection, result, error) =>
@@ -98,14 +90,10 @@ namespace RoadTrip
                     user.name = userInfo["name"].ToString();
                     DataStorage.Instance.UpdateUser(user);
                 });
-                var newUser = segue.DestinationViewController as PrefsController;
-                newUser.user = user;
             }
-            else
-            {
-                var returningUser = segue.DestinationViewController as NewTripController;
-                returningUser.user = user;
-            }
+            var returningUser = segue.DestinationViewController as NewTripController;
+            returningUser.user = user;
+            
         }
 
         private void showLoginError() {
