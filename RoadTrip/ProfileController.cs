@@ -8,6 +8,8 @@ namespace RoadTrip
     {
         public ProfileController (IntPtr handle) : base (handle)
         {
+            totaldistLabel = User.miles;
+            nameText = User.name;
         }
     }
 }
