@@ -22,6 +22,10 @@ namespace RoadTrip
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField cityInput { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView mapPinPic { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (aboardButton != null) {
@@ -32,6 +36,11 @@ namespace RoadTrip
             if (cityInput != null) {
                 cityInput.Dispose ();
                 cityInput = null;
+            }
+
+            if (mapPinPic != null) {
+                mapPinPic.Dispose ();
+                mapPinPic = null;
             }
         }
     }
